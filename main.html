@@ -10,8 +10,16 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
-		}
+            arr.sort(function(a,b){return a-b});
+            let first = arr[0];
+            for(let i=1;i<arr.length;i++){
+                if(arr[i]>first){
+                    return arr[i];
+                    break;
+                } 
+            }
+			return '-Infinity';
+		} 
 
 		function Main() {
 			var n = prompt("Enter the number of elements");
